@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace HelloWorld
 {
@@ -6,7 +7,7 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            File.AppendAllText(@"C:\repos\Greeting.txt", "Hello world!" + Environment.NewLine);
         }
     }
 }
