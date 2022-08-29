@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 
 namespace HelloWorld
 {
@@ -6,7 +7,11 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-        }
+            
+			DateTime now = DateTime.Now;
+
+			CultureInfo.CurrentCulture = CultureInfo.InvariantCulture;
+			Console.WriteLine($"Hello World! {now.ToString()}");
+		}
     }
 }
